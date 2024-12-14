@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Meal Selector
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Meal Selector is a React-based web application designed to help users answer the age-old question: "What should I cook today?". The app provides a variety of meal suggestions from different categories, random meal ideas, and search capabilities for specific recipes.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Meal Categories**: Explore recipes by selecting a meal category.
+- **Random Meal Generator**: Discover new recipes with a single click.
+- **Search Functionality**: Search meals by name for tailored results.
+- **Recipe Details**: View recipe details and instructions on the MealDB platform.
+- **Dynamic Data Integration**: Real-time recipe data fetched from the MealDB API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+Meal Selector/
+├── public/                     # Public-facing assets (HTML, icons, etc.)
+├── src/                        # React source code
+│   ├── components/             # Reusable React components
+│   ├── App.js                  # Main application component
+│   ├── index.js                # Application entry point
+│   └── styles.css              # Custom styles
+├── package.json                # Project dependencies and scripts
+└── README.md                   # Project documentation
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Data Collection and Processing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### API Integration
+The application utilizes the [MealDB API](https://www.themealdb.com/) to fetch meal data dynamically:
+- **Categories**: Fetches a list of meal categories via `https://www.themealdb.com/api/json/v1/1/list.php?c=list`.
+- **Meals by Category**: Retrieves meals from a selected category via `https://www.themealdb.com/api/json/v1/1/filter.php?c={category}`.
+- **Random Meal**: Fetches a random meal using `https://www.themealdb.com/api/json/v1/1/random.php`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+### Frontend
+- **React.js**: JavaScript library for building the user interface.
+- **Bootstrap**: Styling framework for responsive design.
+- **Axios**: Library for HTTP requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### API
+- **MealDB API**: Provides dynamic meal data, including images and recipe links.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
+Ensure the following are installed on your system:
+- Node.js (v14 or higher)
+- npm or yarn
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd meal-selector
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   The application will run at [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Features in Detail
 
-### Making a Progressive Web App
+### Meal Categories
+- View a dropdown of meal categories.
+- Select a category to load corresponding meals.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Random Meal Generator
+- Click a button to receive a random recipe suggestion.
+- Get direct links to detailed instructions.
 
-### Advanced Configuration
+### Search Functionality
+- Search for recipes by name.
+- Filter results dynamically as you type.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Recipe Details
+- See meal titles, images, and a link to detailed recipes hosted on MealDB.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Credits for AI Assistance
 
-### `npm run build` fails to minify
+AI tools, including ChatGPT, were utilized during the development process. These tools assisted in:
+- Designing the overall structure of the React application.
+- Crafting API integration logic for fetching and displaying meal data.
+- Styling suggestions using Bootstrap.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All AI-generated code was reviewed, understood, and integrated into the project.
+
+---
+
+## Contributing
+
+Feel free to contribute to the Meal Selector project. Submit pull requests or open issues to share your suggestions.
+
+---
+
